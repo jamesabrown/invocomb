@@ -2,6 +2,9 @@
 # server.rb
 #
 
+#
+# Setup user, group and install directory
+#
 directory '/srv/invocomb' do
   owner 'invocomb'
   group 'invocomb'
@@ -23,4 +26,11 @@ git '/srv/invocomb' do
   repository  node['invocomb']['git_repository']
   revision    node['invocomb']['git_revision']
   action      :sync
+end
+
+#
+# Install Invocomb gem
+#
+gem_package 'invocomb' do
+  action :install
 end
