@@ -14,7 +14,6 @@ provisioner:
   name: chef_zero
   environments_path: environments
   client_rb:
-    environment: test
     diff_disable: true
 
 platforms:
@@ -26,5 +25,6 @@ platforms:
     require_chef_omnibus: false
 
 suites:
-  - name: default
+  - name: invocomb
     run_list:
+      - recipe[invocomb::default]
