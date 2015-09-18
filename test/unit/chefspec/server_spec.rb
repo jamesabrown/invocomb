@@ -44,4 +44,8 @@ it 'checks out invocomb repo' do
 )
 end
 
+it 'installs invocomb gem' do
+  expect(chef_run).to install_gem_package('invocomb')
+end
+
 end
