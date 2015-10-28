@@ -19,8 +19,8 @@ provisioner:
 platforms:
 - name: ubuntu-14.04
   driver:
-    box: invoca-vagrant-virtualbox-ubuntu-14.04
-    box_url: https://s3.amazonaws.com/ringrevenue-infrastructure/images/invoca-vagrant-virtualbox-ubuntu-14.04.box
+    box: invoca-ubuntu-14.04
+    box_url: https://s3.amazonaws.com/ringrevenue-infrastructure/images/invoca-ubuntu-14.04.virtualbox.box
   driver_config:
     require_chef_omnibus: false
 
